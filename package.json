@@ -1,0 +1,43 @@
+{
+  "name": "vscode-animations",
+  "displayName": "VSCode Animations",
+  "description": "Add smooth animations to VSCode UI elements",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-animations.enableAnimations",
+        "title": "Enable VSCode Animations"
+      },
+      {
+        "command": "vscode-animations.disableAnimations",
+        "title": "Disable VSCode Animations"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "18.x",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ErikCMorgan/vscode-animations"
+  }
+}
